@@ -30,17 +30,6 @@ func main() {
 
 	reader := bufio.NewReader(os.Stdin)
 
-	var vect []int
-	vect = make([]int, 10)
-
-	for i := 0; i < 6; i++ {
-		vect[i] = i + 1
-	}
-
-	fmt.Println(vect)
-	fmt.Println(len(vect))
-	fmt.Println(cap(vect))
-
 	for {
 		fmt.Print("$$> ")
 		input, err := reader.ReadString('\n')
