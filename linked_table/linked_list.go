@@ -14,13 +14,17 @@ func push(head **label, key string, value string) {
 
 }
 
-func pop(head **label) (string, string) {
+func pop(head **label) (string, string, bool) {
 
 	curr := *head
 
 	*head = (*head).next
 
-	return curr.key, curr.value
+	if *head == nil {
+		return "", "", false
+	}
+
+	return curr.key, curr.value, true
 }
 
 func get_tail(head **label) *label {

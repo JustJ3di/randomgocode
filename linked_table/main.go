@@ -16,7 +16,6 @@ func main() {
 	push(&head, "olaaa", "sss1")
 
 	key, value := pop(&head)
-
 	push(&head, "olasss", "dasa")
 
 	fmt.Println(head.key, head.value)
